@@ -4,26 +4,73 @@
     <meta charset="UTF-8">
     <title>Il mio Portfolio</title>
     <style>
-        body { font-family: sans-serif; line-height: 1.6; max-width: 600px; margin: 40px auto; padding: 20px; background-color: #f4f4f4; }
-        .card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        h1 { color: #333; }
-        code { background: #eee; padding: 2px 5px; border-radius: 3px; }
-        img { max-width: 100%; height=auto; }
+        body { 
+            background-color: #0d0d0d;
+            color: #00FF00;
+            font-family: 'Courier New', Courier, monospace;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /*imposta l'altezza della pagina grande quanto lo schermo*/
+            margin: 0;
+        }
+
+        /*Simula il terminale*/
+        .terminal {
+            width: 80%;
+            max-width: 700px;
+            background-color: #000;
+            border: 2px solid #00FF00;
+            padding: 20px;
+            box-shadow: 0 0 15px #00FF00; /* Bagliore verde esterno */
+            border-radius: 5px;
+        }
+        /* Effetto testo che brilla */
+        h1 {
+            font-size: 1.5rem;
+            text-shadow: 0 0 5px #00FF00;
+        }
+
+        /* Simula il cursore che lampeggia */
+        .cursor {
+            display: inline-block;
+            width: 10px;
+            height: 20px;
+            background-color: #00FF00;
+            animation: blink 1s infinite;
+            vertical-align: middle;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+
+        a { color: #00FF00; text-decoration: underline; }
+
+        img {
+            border: 2px solid #00FF00; /* Bordo verde stile terminale */
+            padding: 5px;
+            border-radius: 10px; /* Angoli arrotondati */
+            /*filter: grayscale(100%); /* Rende la foto in bianco e nero per un look più retro */
+        }
     </style>
 </head>
 <body>
-    <div class="card">
-        <h1>Ciao!</h1>
-        <h2>Benvenut* nella mia pagina ospitata su <strong>GitHub Pages</strong>.</h2>
-        <p>Mi chiamo Maria Vittoria e mi sono appena laureata in Matematica.</p>
-        <p>Al momento sto imparando a gestire i repository e a pubblicare contenuti online.</p>
-        <a href="https://github.com/Maaav-f">Questo è il mio profilo GitHub</a>
+    <div class="terminal">
+        <h1>> SYSTEM READY...</h1>
+        <p>> User: Maria_Vittoria</p>
+        <p>> Status: Apprendimento HTML/CSS in corso...</p>
+        <p>> Progetti: <a href="https://github.com/Maaav-f">[Link_al_mio_GitHub]</a></p>
+        <p>> <span class="cursor"></span></p>
         <hr>
-        <p>Sono anche un'appassionata di montagna, mi piace fare trekking ed escursioni. Qui potete trovare alcune foto scattate durante alcune gite estive!</p>
+        <p>>Hobbies: Montagna/Trekking/Escursioni. Qui potete trovare alcune foto scattate durante alcune gite estive!</p>
         <img src="rifugiosantner.jpg" alt="Rifugio Santner, Dolomiti, 2734m.">
-        <p style="font-size: 0.8rem; font-style: italic;"> Rifugio Santner, Dolomiti, 2734m. </p>
+        <p style="font-size: 0.8rem;> Rifugio Santner, Dolomiti, 2734m. </p>
         <img src="passoantermoia.jpg" alt="Veduta dal Passo Antermoia, 2770m.">
-        <p style="font-size: 0.8rem; font-style:italic";> Veduta dal Passo Antermoia, Dolomiti, 2770m. </p>
+        <p style="font-size: 0.8rem;> Veduta dal Passo Antermoia, Dolomiti, 2770m. </p>
     </div>
 </body>
 </html>
+    
+        
